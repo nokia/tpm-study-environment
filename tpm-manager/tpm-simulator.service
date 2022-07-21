@@ -1,0 +1,20 @@
+[Unit]
+Description=TPM2 Simulator
+
+[Service]
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+
+# Location of files
+ExecStart=/usr/bin/swtpm chardev --vtpm-proxy --tpmstate dir=/root/tpm2simulator/mytpm --tpm2 --ctrl type=tcp,port=2322
+
+ExecStartPre=-/usr/sbin/modprobe tpm_vtpm_proxy
+ExecStartPre=-/bin/mkdir /root/tpm2simulator/mytpm
+
+# User to run as, usually it's a good idea to not use root
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
