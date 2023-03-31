@@ -36,7 +36,7 @@ The [./docs/](./docs/) directory includes a script and documentation on installi
 ## Citation
 If you use this repo, or refer to the [original publication](https://www.usenix.org/conference/soups2022/presentation/rao)
 
-@inproceedings {281260,
+```@inproceedings {281260,
 author = {Siddharth Prakash Rao and Gabriela Limonta and Janne Lindqvist},
 title = {Usability and Security of Trusted Platform Module ({TPM}) Library {APIs}},
 booktitle = {Eighteenth Symposium on Usable Privacy and Security (SOUPS 2022)},
